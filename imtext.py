@@ -8,14 +8,14 @@ RGBI = []
 
 for byte in range(256):
     # 8 bits → 3/3/2 RGB
-    r = (byte >> 5) & 0b111
-    g = (byte >> 2) & 0b111
-    b = byte & 0b11
+    r = byte & 0xFF
+    g = byte & 0xFF
+    b = byte & 0xFF
 
     RGBI.append((
-        r * 255 // 7,
-        g * 255 // 7,
-        b * 255 // 3
+        r
+        g
+        b
     ))
 
 
